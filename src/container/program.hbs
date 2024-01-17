@@ -1,0 +1,71 @@
+<div>
+  {{#with program}}
+     <h1>Excursion: </h1>
+         {{#with excursion}}
+         <h3>{{name}}</h3>
+             {{location.city}},{{location.country}} - {{date}}
+         {{/with}}
+     <h3>Program:</h3>
+         {{excursion.program.[0].name}} ,
+         {{excursion.program.[0].type}} ,
+         {{excursion.program.[0].duration}}
+      <h3>Details:</h3>
+      <b>Museum :</b> 
+      {{#with excursion.program.[0].details}} 
+         {{museum.name}},
+         {{museum.location.address}},
+         {{museum.location.city}},
+         {{museum.location.country}}
+      {{/with}}
+      <h3>Exhibits :</h3>
+      <ul>
+      {{#with excursion.program.[0].details}} 
+            <li>name:{{museum.exhibits.[0].name}}</li>
+            <li>artist:{{museum.exhibits.[0].artist}}</li>
+            <li>description:{{museum.exhibits.[0].description}}</li>
+               {{#if museum.exhibits.[0].audio_guide includeZero=true}} 
+                   <em>Guide:{{guide.name}},{{guide.language}}</em>
+                   <br>rating:{{guide.rating}}
+               {{/if}}
+      {{/with}}
+     </ul>
+     <ul>
+      {{#with excursion.program.[0].details}} 
+          <li>name:{{museum.exhibits.[1].name}}</li>
+          <li>artist:{{museum.exhibits.[1].artist}}</li>
+          <li>description:{{museum.exhibits.[1].description}}</li>
+              {{#if museum.exhibits.[1].audio_guide includeZero=true}} 
+                  <em>Guide:{{guide.name}},{{guide.language}}</em>
+                  <br>rating:{{guide.rating}}
+              {{/if}}
+        {{/with}}
+     </ul> 
+      <h3>Program:</h3>
+            <li>name:{{excursion.program.[1].name}}</li>,
+            <li>type:{{excursion.program.[1].type}}</li> ,
+            <li>duration:{{excursion.program.[1].duration}}</li>
+      
+      <h3>Details:</h3>
+      <b>Venue :</b> 
+        {{#with excursion.program.[1].details}} 
+            {{venue.name}},
+            {{venue.location.address}},
+            {{venue.location.city}},
+            {{venue.location.country}}
+      {{/with}}
+            <h3>Performers :</h3>
+      <ul>
+      {{#with excursion.program.[1].details}} 
+            <li>name:{{performers.[0].name}}</li>
+            <li>type: {{performers.[0].type}}</li>
+            <br>
+            <li>name:{{performers.[1].name}}</li>
+            <li>type: {{performers.[1].type}}</li>
+      {{/with}}
+     </ul>
+     {{#with excursion.program.[1].details}}
+            <em>Guide:{{guide.name}},{{guide.language}}</em>
+            <br>rating:{{guide.rating}}
+     {{/with}}
+   {{/with}}
+</div>      
