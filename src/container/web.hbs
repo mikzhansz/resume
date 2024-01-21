@@ -1,0 +1,51 @@
+<div>
+    {{#with web}}    
+        {{#with languages.[0]}}
+          <h1>language name:{{name}},version:{{version}}</h1>
+          <p>description:<em>{{description}} </em></p>
+         {{/with}}
+                <h2>elements1:</h2> 
+            <li><strong>{{languages.[0].elements.[0].name}}</strong>:<em>{{languages.[0].elements.[0].description}}</em></li>
+                <h2>attributes:</h2> 
+            <li>{{languages.[0].elements.[1].attributes.[0].name}}:<em>{{languages.[0].elements.[1].attributes.[0].description}}</em></li>
+                <h2>elements2:</h2>
+            <li>{{languages.[0].elements.[1].name}}:<em>{{languages.[0].elements.[1].description}}</em></li> 
+                <h2>attributes:</h2> 
+            <li>{{languages.[0].elements.[1].attributes.[0].name}}:<em>{{languages.[0].elements.[1].attributes.[0].description}}</em></li>
+            <li>{{languages.[0].elements.[1].attributes.[1].name}}:<em>{{languages.[0].elements.[1].attributes.[1].description}}</em></li>
+          
+          {{#with languages.[1]}}   
+             <h1>language name:{{name}},version:{{version}}</h1>
+            <p>description:<em>{{description}} </em></p>
+          {{/with}}
+              <h2>properties 1:</h2> 
+             <li><strong>{{languages.[1].properties.[0].name}}</strong>:<em>{{languages.[1].properties.[0].description}}</em></li>
+                <h2>values:</h2> 
+             <li>{{languages.[1].properties.[0].values.[1].value}}:<em>{{languages.[1].properties.[0].values.[1].description}}</em></li>       
+             <li>{{languages.[1].properties.[0].values.[0].value}}:<em>{{languages.[1].properties.[0].values.[0].description}}</em></li>
+             <h2>properties 2:</h2> 
+             <li><strong>{{languages.[1].properties.[1].name}}</strong>:<em>{{languages.[1].properties.[1].description}}</em></li>    
+                 <h2>values:</h2> 
+             <li>{{languages.[1].properties.[1].values.[0].value}}:<em>{{languages.[1].properties.[1].values.[0].description}}</em></li> 
+             <li>{{languages.[1].properties.[1].values.[1].value}}:<em>{{languages.[1].properties.[1].values.[1].description}}</em></li>       
+      
+         {{#with languages.[2]}}   
+            <h1>language name:{{name}},version:{{version}}</h1>
+            <p>description:<em>{{description}} </em></p>
+        {{/with}}
+               <h2>functions 1:</h2> 
+           <li><strong>{{languages.[2].functions.[0].name}}</strong>:
+           <em>{{languages.[2].functions.[0].description}}</em></li>
+                <h2>parameters:</h2> 
+            <li>{{languages.[2].functions.[0].parameters.[0].name}}: <em>{{languages.[2].functions.[0].parameters.[0].type}}</em></li>       
+            <li><em>{{languages.[2].functions.[0].parameters.[0].description}}</em></li>
+               <h2>functions 2:</h2> 
+            <li><strong>{{languages.[2].functions.[1].name}}</strong>:
+            <em>{{languages.[2].functions.[1].description}}</em></li>
+              <h2>parameters:</h2> 
+            <li>{{languages.[2].functions.[1].parameters.[0].name}}: <em>{{languages.[2].functions.[1].parameters.[0].type}}</em></li>       
+            <li><em>{{languages.[2].functions.[1].parameters.[0].description}}</em></li>
+     
+  {{/with}}
+     
+</div>
