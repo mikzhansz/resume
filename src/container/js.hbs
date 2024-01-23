@@ -1,0 +1,66 @@
+
+<div>
+   
+      <section>
+        <div>
+            <h1>{{name}} </h1>
+        </div>
+        <div>
+            <b>{{description}}</b>
+        </div>
+      </section>
+         {{#with history}}
+               <h3>{{year}}</h3>
+               <h3>Founder {{founder}}</h3>
+         {{/with}}
+                  <hr>
+               <button type="button" class="btn btn-info"><h3>Types</h3></button>
+                  {{#each types}}
+               <li>{{this}}</li>
+                   {{/each}}
+                  <br>
+               <button type="button" class="btn btn-info"><h3>Syntax</h3></button> 
+                   <br>
+                   {{#with syntax}}
+                   <br>
+               <button type="button" class="btn btn-primary"><b>Variables</b></button>
+                   {{#each variables}}
+               <li>{{this}}</li>
+                   {{/each}}
+               <button type="button" class="btn btn-primary"><b>Functions</b></button>    
+                   {{#each functions}}
+               <li>{{this}}</li>
+                   {{/each}}
+               <button type="button" class="btn btn-primary"><b>Conditionals</b></button>
+                   {{#each conditionals}}
+               <li>{{this}}</li>
+                   {{/each}}
+               <button type="button" class="btn btn-primary"><b>Loops</b></button>    
+                   {{#each loops}}
+               <li>{{this}}</li>
+                   {{/each}}
+               <button type="button" class="btn btn-primary"><b>Classes</b></button>    
+                  {{#each classes}}
+               <li>{{this}}</li>
+                   {{/each}}
+         {{/with}}
+               <button type="button" class="btn btn-info"><h3>Features</h3></button> 
+                  {{#each features}}
+               <li>{{this}}</li>
+                  {{/each}}
+                  <br>
+               <button type="button" class="btn btn-info"><h3>Libraries</h3></button>
+                  {{#each libraries}}
+               <li>{{this}}</li>
+                  {{/each}}
+               <button type="button" class="btn btn-info"><h3>Tools</h3></button>
+                  {{#each tools}}
+               <li>{{this}}</li>
+                  {{/each}} 
+               <button type="button" class="btn btn-info"><h3>Community</h3></button>
+               {{#each community}}
+               <li>{{name}},{{type}}</li>
+                  {{/each}} 
+</div>
+
+
