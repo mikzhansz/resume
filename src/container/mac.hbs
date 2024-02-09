@@ -1,0 +1,81 @@
+<div>
+    <h1>{{name}},{{description}}</h1>
+    <h2>price {{price}}</h2>
+    <h2>category {{category}}</h2>
+
+    {{#with features}} 
+       <h1>processor:</h1>
+        {{#with processor}}
+           <li>brand:{{brand}}</li>
+           <li>model:{{model}}</li>
+           <li>speed:{{speed}}</li>
+           <li>cores:{{cores}}</li>
+           <li>cache:{{cache}}</li>
+        {{/with}}
+        <br>
+        {{#with memory}}
+           <h1>memory:</h1>
+           <li>type:{{type}}</li>
+           <li>size:{{size}}</li>
+           <li>speed:{{speed}}</li>
+        {{/with}}
+        <br>
+        {{#with storage}}
+           <h1>storage:</h1>
+           <li>type:{{type}}</li>
+           <li>size:{{size}}</li>
+        {{/with}}
+        <br>
+        {{#with display}}
+            <h1>display:</h1>
+            <li>size:{{size}}</li>
+            <li>resolution:{{resolution}}</li>
+            <li>technology:{{technology}}</li>
+            <li>color_space:{{color_space}}</li>
+            <li>brightness:{{brightness}}</li>
+            <li>refresh_rate:{{refresh_rate}}</li>
+        {{/with}}
+        <br>
+        {{#with graphics}}
+            <h1>graphics:</h1>
+            <li>brand:{{brand}}</li>
+            <li>model:{{model}}</li>
+            <li>memory:{{memory}}</li>
+        {{/with}}
+           <h1>ports</h1>
+           <li>type:{{ports.[0].type}}</li>
+           <li>count:{{ports.[0].count}}</li>
+           <h3>features:</h3>
+           <br>
+        {{#each ports.[0].features}}
+            <ul><li>{{this}}</li></ul>
+        {{/each}}
+        <br>
+            <li>type:{{ports.[1].type}}</li>
+            <li>count:{{ports.[1].count}}</li>
+            <h1>battery:</h1>
+            <li>type:{{battery.type}}</li>
+            <li>capacity:{{battery.capacity}}</li>
+            <li>life:{{battery.life}}</li>  
+            <h1>weight:</h1>
+            <li>life:{{weight}}</li>
+        <br>    
+            <h1>dimensions:</h1>
+        {{#with dimensions}}
+            <li>height:{{height}}</li>
+            <li>width:{{width}}</li>
+            <li>depth:{{depth}}</li> 
+        {{/with}} 
+        <br>
+            <h1>operating_system:</h1>
+            <li>{{operating_system}}</li>
+            <h1>accessories:</h1>
+            <li>name:{{accessories.[0].name}}</li>
+            <li>price:{{accessories.[0].price}}</li> 
+            <li>name:{{accessories.[1].name}}</li>
+            <li>price:{{accessories.[1].price}}</li> 
+            <li>name:{{accessories.[2].name}}</li>
+            <li>price:{{accessories.[2].price}}</li> 
+    {{/with}}
+     
+</div>
