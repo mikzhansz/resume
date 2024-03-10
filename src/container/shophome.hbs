@@ -1,0 +1,630 @@
+<main >
+    {{#with navigation}}
+    <div class="row">
+        <div class="col-12 mb-5 ms-5">
+               <div class="nav nav-tabs">
+                    <div class="nav-item ">
+                        <a href ={{links.[0].href}} class="nav-link">{{links.[0].text}}</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href ={{links.[1].href}} class="nav-link ">{{links.[1].text}} </a>
+                    </div>
+                    <div class="nav-item ">
+                        <a href ={{links.[2].href}} class="nav-link disable">{{links.[2].text}}</a>
+                    </div>
+               </div> 
+         </div> 
+    </div>        
+    {{/with}}
+        {{#with newsBlock}}
+        <section class="col-12">
+            <h1 class="ms-5 mb-3 text-center">{{title}}</h1>
+        </section>
+        <section class="col-12 ms-5 mb-5">
+            <div class="row g-2"> 
+                <div class="col-3">
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {{cards.[0].title}}
+                                   {{#unless isTop}}
+                                       {{#if cards.[0].isTop includeZero=true}}
+                                    <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                       Top  
+                                    </span>
+                                    {{else}}
+                                        {{/if}}
+                                    {{/unless}}
+                                {{#unless isNew}}
+                                    {{#if cards.[0].isNew includeZero=true}}
+                                    <span class="badge text-bg-success rounded-pill text-uppercase">
+                                         New  
+                                    </span>
+                                    {{else}}
+                                    {{/if}}
+                                {{/unless}}
+                            </h6>  
+                                <p class="m-0">{{cards.[0].description}}</p> 
+                        </div>    
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {{cards.[1].title}}
+                                    {{#unless isTop}}
+                                        {{#if cards.[1].isTop includeZero=true}}
+                                    <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                        Top    
+                                    </span>
+                                    {{else}}
+                                        {{/if}}
+                                    {{/unless}}
+                                    {{#unless isNew}}
+                                        {{#if cards.[1].isNew includeZero=true}}
+                                    <span class="badge text-bg-success rounded-pill text-uppercase">
+                                       New   
+                                    </span>
+                                    {{else}}
+                                        {{/if}}
+                                    {{/unless}}
+                            </h6>  
+                                <p class="m-0">{{cards.[1].description}}</p> 
+                        </div>    
+                    </div>
+                </div>    
+                <div class="col-3">
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {{cards.[2].title}}
+                                    {{#unless isTop}}
+                                        {{#if cards.[2].isTop includeZero=true}}
+                                    <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                        Top      
+                                    </span>
+                                        {{else}}
+                                    {{/if}}
+                                    {{/unless}}
+                                    {{#unless isNew}}
+                                        {{#if cards.[2].isNew includeZero=true}}
+                                    <span class="badge text-bg-success rounded-pill text-uppercase">
+                                        New   
+                                    </span>
+                                      {{else}}
+                                    {{/if}}
+                                    {{/unless}}
+                            </h6>  
+                                <p class="m-0">{{cards.[2].description}}</p> 
+                        </div>    
+                     </div>
+                </div>    
+                <div class="col-3">
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {{cards.[3].title}}
+                                    {{#unless isTop}}
+                                        {{#if cards.[3].isTop includeZero=true}}
+                                        <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                            Top      
+                                        </span>
+                                    {{else}}
+                                        {{/if}}
+                                    {{/unless}}
+                                    {{#unless isNew}}
+                                        {{#if cards.[3].isNew includeZero=true}}
+                                        <span class="badge text-bg-success rounded-pill text-uppercase">
+                                            New   
+                                        </span>
+                                    {{else}}
+                                        {{/if}}
+                                    {{/unless}}
+                            </h6>  
+                                <p class="m-0">{{cards.[3].description}}</p> 
+                        </div>    
+                    </div>
+                </div>    
+                <div class="col-3">
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {{cards.[4].title}}
+                                    {{#unless isTop}}
+                                    {{#if cards.[4].isTop includeZero=true}}
+                                    <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                        Top      
+                                    </span>
+                                    {{else}}
+                                    {{/if}}
+                                {{/unless}}
+                                {{#unless isNew}}
+                                    {{#if cards.[4].isNew includeZero=true}}
+                                    <span class="badge text-bg-success rounded-pill text-uppercase">
+                                        New   
+                                    </span>
+                                    {{else}}
+                                    {{/if}}
+                                {{/unless}}
+                            </h6>  
+                                <p class="m-0">{{cards.[4].description}}</p> 
+                        </div>    
+                    </div>
+                </div>    
+                <div class="col-3">
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {{cards.[5].title}}
+                                    {{#unless isTop}}
+                                       {{#if cards.[5].isTop includeZero=true}}
+                                    <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                        Top       
+                                    </span>
+                                    {{else}}
+                                       {{/if}}
+                                {{/unless}}
+                                {{#unless isNew}}
+                                    {{#if cards.[5].isNew includeZero=true}}
+                                    <span class="badge text-bg-success rounded-pill text-uppercase">
+                                        New   
+                                    </span>
+                                {{else}}
+                                    {{/if}}
+                                {{/unless}}
+                            </h6>  
+                                <p class="m-0">{{cards.[5].description}}</p> 
+                        </div>    
+                    </div>
+                </div> 
+                <div class="col-3">
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {{cards.[6].title}}
+                                    {{#unless isTop}}
+                                      {{#if cards.[6].isTop includeZero=true}}
+                                    <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                        Top       
+                                    </span>
+                                    {{else}}
+                                       {{/if}}
+                                {{/unless}}
+                                {{#unless isNew}}
+                                      {{#if cards.[6].isNew includeZero=true}}
+                                    <span class="badge text-bg-success rounded-pill text-uppercase">
+                                        New   
+                                    </span>
+                                    {{else}}
+                                       {{/if}}
+                                {{/unless}}
+                            </h6>  
+                                <p class="m-0">{{cards.[6].description}}</p> 
+                        </div>    
+                    </div>
+                </div>    
+                <div class="col-3">
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {{cards.[7].title}}
+                                    {{#unless isTop}}
+                                       {{#if cards.[7].isTop includeZero=true}}
+                                    <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                        {{cards.[7].isTop}}
+                                         TOP   
+                                    </span>
+                                    {{else}}
+                                       {{/if}}
+                                {{/unless}}
+                                {{#unless isNew}}
+                                        {{#if cards.[7].isNew includeZero=true}}
+                                    <span class="badge text-bg-success rounded-pill text-uppercase">
+                                        New   
+                                    </span>
+                                    {{else}}
+                                        {{/if}}
+                                {{/unless}}
+                            </h6>  
+                                <p class="m-0">{{cards.[7].description}}</p> 
+                        </div>    
+                    </div>
+                </div>    
+            </div>
+        </section>           
+    {{/with}}
+<br>
+{{#with goodsBlock}}
+    <div class="row g-2">
+        <div class="col-12">
+            <div class="nav nav-tabs mb-5">
+                <div class="nav-item">
+                    {{#unless isActive}}
+                        {{#if tabs.[0].isActive includeZero=true}}
+                            <span class="nav-link active text-uppercase ms-5">
+                                {{tabs.[0].text}}  
+                            </span>
+                              {{else}}
+                        {{/if}}
+                    {{/unless}}
+                    {{#unless isDisabled}}
+                        {{#if tabs.[0].isDisabled includeZero=true}}
+                            <span class="nav-link disable text-uppercase ms-5">
+                                {{tabs.[0].text}}  
+                            </span>
+                              {{else}}
+                        {{/if}}
+                    {{/unless}}
+                </div>
+                <div class="nav-item">
+                    {{#unless isActive}}
+                        {{#if tabs.[1].isActive includeZero=true}}
+                            <span class="nav-link active text-uppercase ms-5">
+                                {{tabs.[1].text}}  
+                            </span>
+                              {{else}}
+                            {{/if}}
+                           {{/unless}}
+                        {{#unless isDisabled}}
+                        {{#if tabs.[1].isDisabled includeZero=true}}
+                            <span class="nav-link disable text-uppercase ms-5">
+                                {{tabs.[1].text}}  
+                            </span>
+                              {{else}}
+                        {{/if}}
+                    {{/unless}}
+                 </div>
+                <div class="nav-item">
+                    {{#unless isActive}}
+                        {{#if tabs.[2].isActive includeZero=true}}
+                            <span class="nav-link active text-uppercase ms-5">
+                                {{tabs.[2].text}}  
+                            </span>
+                              {{else}}
+                            
+                        {{/if}}
+                           {{/unless}}
+                        {{#unless isDisabled}}
+                        {{#if tabs.[2].isDisabled includeZero=true}}
+                            <span class="nav-link disable text-uppercase ms-5">
+                                {{tabs.[2].text}}  
+                            </span>
+                              {{else}}
+                        {{/if}}
+                    {{/unless}}
+                 </div>
+                <div class="nav-item">
+                    {{#unless isActive}}
+                        {{#if tabs.[3].isActive includeZero=true}}
+                            <span class="nav-link active text-uppercase ms-5">
+                                {{tabs.[3].text}}  
+                            </span>
+                              {{else}}
+                            
+                        {{/if}}
+                           {{/unless}}
+                        {{#unless isDisabled}}
+                        {{#if tabs.[3].isDisabled includeZero=true}}
+                            <span class="nav-link disable text-uppercase ms-5">
+                                {{tabs.[3].text}}  
+                            </span>
+                              {{else}}
+                        {{/if}}
+                    {{/unless}}
+                 </div>
+            </div>
+        </div>    
+    </div>
+
+<section class="col-12 ms-5 mb-5">
+    <div class="row g-2">
+        <div class="col-4">
+            <div class="card">
+                <img class="card-img-top"src={{cards.[0].image}} class="card-header">
+                <div class="card-body">
+                    <h2 class="card-title">{{cards.[0].title}}</h2>
+                        {{#unless isHot}}
+                            {{#if cards.[0].isHot includeZero=true}}
+                                <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                    {{cards.[0].isHot }}   
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                        {{/unless}}
+                            {{#unless isNew}}
+                                {{#if cards.[0].isNew includeZero=true}}
+                                    <span class="badge text-bg-success rounded-pill text-uppercase">
+                                        {{cards.[0].isNew}}  
+                                    </span>
+                                    {{else}}
+                                {{/if}}
+                            {{/unless}}
+                    <p>{{cards.[0].description}}</p>    
+                </div>
+            </div>
+        </div>
+     
+    <div class="col-4">
+            <div class="card">
+                <img class="card-img-top"src={{cards.[1].image}} class="card-header">
+                <div class="card-body">
+                    <h2 class="card-title">{{cards.[1].title}}</h2>
+                        {{#unless isHot}}
+                            {{#if cards.[1].isHot includeZero=true}}
+                                <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                    {{cards.[1].isHot}}   
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                            {{/unless}}
+                        {{#unless isNew}}
+                            {{#if cards.[1].isNew includeZero=true}}
+                                <span class="badge text-bg-success rounded-pill text-uppercase">
+                                    {{cards.[1].isNew}}  
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                        {{/unless}}
+                    <p>{{cards.[1].description}}</p>
+                </div>
+            </div>
+        </div> 
+
+    <div class="col-4">
+        <div class="card">
+            <img class="card-img-top"src={{cards.[2].image}} class="card-header">
+                <div class="card-body">
+                    <h2 class="card-title">{{cards.[2].title}}</h2>
+                        {{#unless isHot}}
+                            {{#if cards.[2].isHot includeZero=true}}
+                                <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                    {{cards.[2].isHot }}   
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                            {{/unless}}
+                        {{#unless isNew}}
+                            {{#if cards.[2].isNew includeZero=true}}
+                                <span class="badge text-bg-success rounded-pill text-uppercase">
+                                    {{cards.[2].isNew}}  
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                        {{/unless}}
+                    <p>{{cards.[0].description}}</p>       
+                </div>
+            </div>
+        </div>
+    <div class="col-4">
+        <div class="card">
+            <img class="card-img-top"src={{cards.[3].image}} class="card-header">
+                <div class="card-body">
+                    <h2 class="card-title">{{cards.[3].title}}</h2>
+                        {{#unless isHot}}
+                            {{#if cards.[3].isHot includeZero=true}}
+                                <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                    {{cards.[3].isHot }}   
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                            {{/unless}}
+                        {{#unless isNew}}
+                            {{#if cards.[3].isNew includeZero=true}}
+                                <span class="badge text-bg-success rounded-pill text-uppercase">
+                                    {{cards.[3].isNew}}  
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                            {{/unless}}
+                    <p>{{cards.[0].description}}</p>
+                </div>
+            </div>
+        </div>
+    <div class="col-4">
+        <div class="card">
+            <img class="card-img-top"src={{cards.[4].image}} class="card-header">
+                <div class="card-body">
+                    <h2 class="card-title">{{cards.[4].title}}</h2>
+                        {{#unless isHot}}
+                            {{#if cards.[4].isHot includeZero=true}}
+                                <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                    {{cards.[4].isHot}}   
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                            {{/unless}}
+                        {{#unless isNew}}
+                            {{#if cards.[4].isNew includeZero=true}}
+                                <span class="badge text-bg-success rounded-pill text-uppercase">
+                                    {{cards.[4].isNew}}  
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                            {{/unless}}
+                    <p>{{cards.[4].description}}</p>        
+                </div>
+            </div>
+        </div>
+    <div class="col-4">
+        <div class="card">
+            <img class="card-img-top"src={{cards.[5].image}} class="card-header">
+                <div class="card-body">
+                    <h2 class="card-title">{{cards.[5].title}}</h2>
+                        {{#unless isHot}}
+                            {{#if cards.[5].isHot includeZero=true}}
+                                <span class="badge text-bg-danger rounded-pill text-uppercase">
+                                    {{cards.[5].isHot }}   
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                            {{/unless}}
+                        {{#unless isNew}}
+                            {{#if cards.[5].isNew includeZero=true}}
+                                <span class="badge text-bg-success rounded-pill text-uppercase">
+                                    {{cards.[5].isNew}}  
+                                </span>
+                                    {{else}}
+                                {{/if}}
+                            {{/unless}}
+                    <p>{{cards.[5].description}}</p>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+{{/with}}
+<div class="col-12">
+    <div class="alert alert-dark ms-5 py-1 mb-5">
+        <h2 class-"m-3">{{subscribe.header}}</h2>
+        <p>{{subscribe.description}}</p>
+        <button class="btn btn-primary mb-3">
+            {{subscribe.buttons.[0].text}}</button>
+        </button>
+        <div>
+        <button class="btn btn-primary mb-3">
+            {{subscribe.buttons.[0].link}}</button>
+        </button>
+        </div>  
+    </div>
+</div>
+<hr>
+       
+<div class="col-12">
+        <div class="card text-bg-success ms-5 my-5">
+            <div class="card-body text-center "> 
+                 <h2 class="card-title ">{{service.title}}</h2>
+                    <p>{{service.description}}</p>
+                      <a href ={{service.buttons.[0].link}} class="btn btn-link btn-primary text-light">
+            {{service.buttons.[0].text}}</button>
+            </div> 
+        </div>
+</div> 
+
+ 
+<section="col-12 ms-4">
+    <div class="row g-1">
+        {{#each footer}} 
+            <div class="col-2 ms-4 mt-0 mb-5 me-0">
+                <div class="nav flex-column">
+                    <div class="nav-item mb-2">
+                        <a href ={{[0].link}} class="nav nav-link text-primary">
+                        <span>{{[0].text}}</span></a>
+                    </div>
+                    <div class="nav-item mb-2">
+                        <a href ={{[1].link}} class="nav nav-link">
+                        <span>{{[1].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                            <a href ={{[2].link}} class="nav nav-link">
+                            <span>{{[2].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                            <a href ={{[3].link}} class="nav nav-link text-dark disabled">
+                            <span>{{[3].text}}</span></a>
+                    </div> 
+                </div>
+            </div>
+        {{/each}}
+        {{#each footer}}
+            <div class="col-2 my-5">  
+                <div class="nav flex-column">
+                    <div class="nav-item mb-2">
+                        <a href ={{[4].link}} class="nav nav-link text-primary">
+                        <span>{{[4].text}}</span></a>
+                    </div>
+                    <div class="nav-item mb-2">
+                        <a href ={{[5].link}} class="nav nav-link">
+                        <span>{{[5].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                        <a href ={{[6].link}} class="nav nav-link">
+                        <span>{{[6].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                        <a href ={{[7].link}} class="nav nav-link text-dark disabled">
+                        <span>{{[7].text}}</span></a>
+                    </div> 
+                </div>
+            </div>
+        {{/each}}
+        {{#each footer}}
+            <div class="col-2">
+                <div class="nav flex-column">
+                    <div class="nav-item mb-2">
+                        <a href ={{[8].link}} class="nav nav-link text-primary">
+                        <span>{{[8].text}}</span></a>
+                    </div>
+                    <div class="nav-item mb-2">
+                        <a href ={{[9].link}} class="nav nav-link">
+                        <span>{{[9].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                        <a href ={{[10].link}} class="nav nav-link">
+                        <span>{{[10].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                        <a href ={{[11].link}} class="nav nav-link text-dark disabled">
+                        <span>{{[11].text}}</span></a>
+                    </div>
+                </div> 
+            </div>
+           {{/each}}
+           {{#each footer}}
+            <div class="col-2">
+                <div class="nav flex-column">              <div class="nav-item mb-2">
+                        <a href ={{[12].link}} class="nav nav-link text-primary">
+                        <span>{{[12].text}}</span></a>
+                    </div>
+                    <div class="nav-item mb-2">
+                        <a href ={{[13].link}} class="nav nav-link">
+                        <span>{{[13].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                        <a href ={{[14].link}} class="nav nav-link">
+                        <span>{{[14].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                        <a href ={{[15].link}} class="nav nav-link text-dark disabled">
+                        <span>{{[15].text}}</span></a>
+                    </div> 
+                </div>
+            </div>
+        {{/each}}
+        {{#each footer}}
+            <div class="col-2">
+                <div class="nav flex-column">
+                    <div class="nav-item mb-2">
+                        <a href ={{[16].link}} class="nav nav-link text-primary">
+                        <span>{{[17].text}}</span></a>
+                    </div>
+                    <div class="nav-item mb-2">
+                        <a href ={{[18].link}} class="nav nav-link">
+                        <span>{{[19].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                        <a href ={{[20].link}} class="nav nav-link">
+                        <span>{{[20].text}}</span></a>
+                    </div> 
+                    <div class="nav-item mb-2">
+                        <a href ={{[21].link}} class="nav nav-link text-dark disabled">
+                        <span>{{[21].text}}</span></a>
+                    </div> 
+                </div>
+            </div>
+        {{/each}}    
+    </div>          
+</section>   
+    
+</main>
+
+
+
+
+
+   
+           
+                        
+                   
+
+        
